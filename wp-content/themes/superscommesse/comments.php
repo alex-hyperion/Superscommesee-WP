@@ -4,12 +4,6 @@
  *
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
  */
 
 /*
@@ -21,7 +15,7 @@ if ( post_password_required() ) {
 	return;
 }
 
-$discussion = twentynineteen_get_discussion_data();
+$discussion = superscommesse_get_discussion_data();
 ?>
 
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
@@ -30,14 +24,14 @@ $discussion = twentynineteen_get_discussion_data();
 		<?php
 		if ( comments_open() ) {
 			if ( have_comments() ) {
-				_e( 'Join the Conversation', 'twentynineteen' );
+				_e( 'Join the Conversation', 'superscommesse' );
 			} else {
-				_e( 'Leave a comment', 'twentynineteen' );
+				_e( 'Leave a comment', 'superscommesse' );
 			}
 		} else {
 			if ( '1' == $discussion->responses ) {
 				/* translators: %s: Post title. */
-				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'twentynineteen' ), get_the_title() );
+				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'superscommesse' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: Number of comments, 2: Post title. */
@@ -46,7 +40,7 @@ $discussion = twentynineteen_get_discussion_data();
 						'%1$s replies on &ldquo;%2$s&rdquo;',
 						$discussion->responses,
 						'comments title',
-						'twentynineteen'
+						'superscommesse'
 					),
 					number_format_i18n( $discussion->responses ),
 					get_the_title()
@@ -67,7 +61,7 @@ $discussion = twentynineteen_get_discussion_data();
 
 		// Show comment form at top if showing newest comments at the top.
 		if ( comments_open() ) {
-			twentynineteen_comment_form( 'desc' );
+			superscommesse_comment_form( 'desc' );
 		}
 
 		?>
@@ -75,8 +69,8 @@ $discussion = twentynineteen_get_discussion_data();
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new TwentyNineteen_Walker_Comment(),
-					'avatar_size' => twentynineteen_get_avatar_size(),
+					'walker'      => new Superscommesse_Walker_Comment(),
+					'avatar_size' => superscommesse_get_avatar_size(),
 					'short_ping'  => true,
 					'style'       => 'ol',
 				)
@@ -87,13 +81,13 @@ $discussion = twentynineteen_get_discussion_data();
 
 		// Show comment navigation
 		if ( have_comments() ) :
-			$prev_icon     = twentynineteen_get_icon_svg( 'chevron_left', 22 );
-			$next_icon     = twentynineteen_get_icon_svg( 'chevron_right', 22 );
-			$comments_text = __( 'Comments', 'twentynineteen' );
+			$prev_icon     = superscommesse_get_icon_svg( 'chevron_left', 22 );
+			$next_icon     = superscommesse_get_icon_svg( 'chevron_right', 22 );
+			$comments_text = __( 'Comments', 'superscommesse' );
 			the_comments_navigation(
 				array(
-					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'twentynineteen' ), __( 'Comments', 'twentynineteen' ) ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'twentynineteen' ), __( 'Comments', 'twentynineteen' ), $next_icon ),
+					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'superscommesse' ), __( 'Comments', 'superscommesse' ) ),
+					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'superscommesse' ), __( 'Comments', 'superscommesse' ), $next_icon ),
 				)
 			);
 		endif;
@@ -102,9 +96,9 @@ $discussion = twentynineteen_get_discussion_data();
 		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
 			?>
 			<div class="comment-form-flex">
-				<span class="screen-reader-text"><?php _e( 'Leave a comment', 'twentynineteen' ); ?></span>
-				<?php twentynineteen_comment_form( 'asc' ); ?>
-				<h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'twentynineteen' ); ?></h2>
+				<span class="screen-reader-text"><?php _e( 'Leave a comment', 'superscommesse' ); ?></span>
+				<?php superscommesse_comment_form( 'asc' ); ?>
+				<h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'superscommesse' ); ?></h2>
 			</div>
 			<?php
 		endif;
@@ -113,7 +107,7 @@ $discussion = twentynineteen_get_discussion_data();
 		if ( ! comments_open() ) :
 			?>
 			<p class="no-comments">
-				<?php _e( 'Comments are closed.', 'twentynineteen' ); ?>
+				<?php _e( 'Comments are closed.', 'superscommesse' ); ?>
 			</p>
 			<?php
 		endif;
@@ -121,7 +115,7 @@ $discussion = twentynineteen_get_discussion_data();
 	else :
 
 		// Show comment form.
-		twentynineteen_comment_form( true );
+		superscommesse_comment_form( true );
 
 	endif; // if have_comments();
 	?>

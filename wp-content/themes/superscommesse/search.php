@@ -1,12 +1,6 @@
 <?php
 /**
  * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
  */
 
 get_header();
@@ -19,7 +13,7 @@ get_header();
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php _e( 'Search results for: ', 'twentynineteen' ); ?>
+					<?php _e( 'Search results for: ', 'superscommesse' ); ?>
 					<span class="page-description"><?php echo get_search_query(); ?></span>
 				</h1>
 			</header><!-- .page-header -->
@@ -40,7 +34,7 @@ get_header();
 			endwhile;
 
 			// Previous/next page navigation.
-			twentynineteen_the_posts_navigation();
+			superscommesse_the_posts_navigation();
 
 			// If no content, include the "No posts found" template.
 		else :

@@ -1,11 +1,11 @@
 {
-  "name": "twentynineteen",
+  "name": "superscommesse",
   "version": "1.0.0",
   "description": "Default WP Theme",
   "bugs": {
-    "url": "https://github.com/WordPress/twentynineteen/issues"
+    "url": "https://github.com/WordPress/superscommesse/issues"
   },
-  "homepage": "https://github.com/WordPress/twentynineteen#readme",
+  "homepage": "https://github.com/WordPress/superscommesse#readme",
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.5.0",
     "autoprefixer": "^9.6.0",
