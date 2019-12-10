@@ -23,7 +23,7 @@
 <!---->
 <!--			<div class="site-branding-container">-->
 <!--				--><?php //get_template_part( 'template-parts/header/site', 'branding' ); ?>
-<!--			</div><!-- .site-branding-container -->
+<!--			</div> .site-branding-container -->
 <!---->
 <!--			--><?php //if ( is_singular() && superscommesse_can_show_post_thumbnail() ) : ?>
 <!--				<div class="site-featured-image">-->
@@ -39,11 +39,11 @@
 //					?>
 <!--					<div class="--><?php //echo $classes; ?><!--">-->
 <!--						--><?php //get_template_part( 'template-parts/header/entry', 'header' ); ?>
-<!--					</div><!-- .entry-header -->
+<!--					</div> .entry-header -->
 <!--					--><?php //rewind_posts(); ?>
 <!--				</div>-->
 <!--			--><?php //endif; ?>
-<!--		</header><!-- #masthead -->
+<!--		</header> #masthead -->
             <header class="header">
                 <div class="header-top">
                     <div class="header-top__left"><a href="#">il gioco è vietato ai minori di anni 18 - <b>può causare dipendenza</b></a></div>
