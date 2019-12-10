@@ -87,7 +87,7 @@
                         <div class="close-mobile-navigation"></div>
                         <div class="header-navigation-container">
                             <div class="header-navigation-header">
-                                <div class="header-avatar"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/avatar.png" alt=""></div>
+                                <div class="header-avatar"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/avatar.png" alt=""></div>
                                 <div class="header-button"><a class="button-header button-header--green" href="#">Registrati</a><a class="button-header button-header--default" href="#">Accedi</a></div>
                             </div>
                             <div class="header-navigation-ovewflow">
@@ -102,7 +102,7 @@
                                     <li><a data-name="casino" href="https://casino.superscommesse.it/">Giochi Casino</a></li>
                                 </ul>
                             </div>
-                            <div class="header-navigation-footer"><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.svg" alt=""></a></div>
+                            <div class="header-navigation-footer"><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt=""></a></div>
                         </div>
                     </div><span class="mobile-filter-button"></span>
                 </div>

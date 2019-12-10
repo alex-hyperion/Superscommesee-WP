@@ -533,15 +533,6 @@ aside.aside {
 .icon-search:before {
   content: '\E011'; }
 
-.noOverlay, #content_container.noOverlay {
-  margin-top: 0 !important; }
-
-#content_container {
-  padding-top: 0 !important; }
-
-.dtp {
-  z-index: 10000 !important; }
-
 body {
   padding-top: 109px; }
   @media only screen and (max-width: 1023px) {
@@ -830,9 +821,6 @@ body {
             right: auto;
             width: 3px;
             background: #ff7300; } }
-
-.at-custom-mobile-bar {
-  z-index: 8888 !important; }
 
 .header-top__left {
   color: #000;
