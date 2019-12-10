@@ -1,0 +1,118 @@
+$icon_font_name:"Icons";
+@font-face {
+	font-family:$icon_font_name;
+	src: url('fonts/Icons.eot');
+	src: url('fonts/Icons.eot?#iefix') format('eot'),
+	url('fonts/Icons.woff') format('woff'),
+	url('fonts/Icons.ttf') format('truetype'),
+	url('fonts/Icons.svg#Icons') format('svg');
+}
+%icon-add-user,
+%icon-added-user,
+%icon-angle,
+%icon-arrow-left,
+%icon-arrow-right,
+%icon-cart,
+%icon-classifica,
+%icon-clock,
+%icon-close,
+%icon-community,
+%icon-desk,
+%icon-giocate,
+%icon-lock-open,
+%icon-lock,
+%icon-monitor,
+%icon-question,
+%icon-search,
+%last_selector {
+		&:before {
+			font-family:$icon_font_name;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+			text-decoration: none;
+			text-transform: none;
+		}
+	}
+
+%icons_before_after {
+	&:before,
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%icons_after {
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%icon-add-user:before {
+	content:'\E001';
+}
+%icon-added-user:before {
+	content:'\E002';
+}
+%icon-angle:before {
+	content:'\E003';
+}
+%icon-arrow-left:before {
+	content:'\E004';
+}
+%icon-arrow-right:before {
+	content:'\E005';
+}
+%icon-cart:before {
+	content:'\E006';
+}
+%icon-classifica:before {
+	content:'\E007';
+}
+%icon-clock:before {
+	content:'\E008';
+}
+%icon-close:before {
+	content:'\E009';
+}
+%icon-community:before {
+	content:'\E00A';
+}
+%icon-desk:before {
+	content:'\E00B';
+}
+%icon-giocate:before {
+	content:'\E00C';
+}
+%icon-lock-open:before {
+	content:'\E00D';
+}
+%icon-lock:before {
+	content:'\E00E';
+}
+%icon-monitor:before {
+	content:'\E00F';
+}
+%icon-question:before {
+	content:'\E010';
+}
+%icon-search:before {
+	content:'\E011';
+}
