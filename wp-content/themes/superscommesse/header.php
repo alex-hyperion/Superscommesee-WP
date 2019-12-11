@@ -108,13 +108,13 @@
                             </div>
                             <div class="header-navigation-ovewflow">
                                 <ul id="navigation">
-                                    <li><a data-name="scommesse" href="/scommesse/schedine.html">Scommesse Sportive</a></li>
-                                    <li><a data-name="pronostici" href="/pronostici/">Pronostici</a></li>
-                                    <li><a data-name="notizie" href="/notizie/">Notizie</a></li>
+                                    <li><a data-name="scommesse" href="www.superscommesse.it/scommesse/schedine.html">Scommesse Sportive</a></li>
+                                    <li><a data-name="pronostici" href="<?php echo get_permalink( get_page_by_title( 'Pronostici' ) )?>">Pronostici</a></li>
+                                    <li><a data-name="notizie" href="www.superscommesse.it/notizie/">Notizie</a></li>
                                     <li><span data-name="bookmaker">Bonus Bookmaker</span></li>
-                                    <li class="multireg-lnk"><a data-name="multiregistrazione" href="/multiregistrazione.html?utm_source=superscommesse&amp;utm_medium=ham_menu&amp;utm_term=&amp;utm_content=multiregistrazione&amp;utm_campaign=sei_furbo">Multiregistrazione - Esclusiva<img src="images/multi.svg" alt=""></a></li>
-                                    <li><a data-name="tifosi" href="/tifosi/">Community</a></li>
-                                    <li><a data-name="archivio" href="/risultati/">Risultati</a></li>
+                                    <li class="multireg-lnk"><a data-name="multiregistrazione" href="www.superscommesse.it/multiregistrazione.html?utm_source=superscommesse&amp;utm_medium=ham_menu&amp;utm_term=&amp;utm_content=multiregistrazione&amp;utm_campaign=sei_furbo">Multiregistrazione - Esclusiva<img src="images/multi.svg" alt=""></a></li>
+                                    <li><a data-name="tifosi" href="www.superscommesse.it/tifosi/">Community</a></li>
+                                    <li><a data-name="archivio" href="www.superscommesse.it/risultati/">Risultati</a></li>
                                     <li><a data-name="casino" href="https://casino.superscommesse.it/">Giochi Casino</a></li>
                                 </ul>
                             </div>
