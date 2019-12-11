@@ -46,8 +46,16 @@
 <!--		</header> #masthead -->
             <header class="header">
                 <div class="header-top">
-                    <div class="header-top__left"><a href="#">il gioco è vietato ai minori di anni 18 - <b>può causare dipendenza</b></a></div>
-                    <div class="header-top__right"><a class="button-header button-header--default" href="#">Accedi</a><a class="button-header button-header--green" href="#">Registrati</a></div>
+                    <?php
+                    if (is_user_logged_in()) : ?>
+                    <?php
+                    //LOGGED USER HTML
+                    else: ?>
+                        <div class="header-top__left"><a href="#">il gioco è vietato ai minori di anni 18 - <b>può causare dipendenza</b></a></div>
+                        <div class="header-top__right"><a class="button-header button-header--default" href="#">Accedi</a><a class="button-header button-header--green" href="#">Registrati</a></div>
+                    <?php
+                    endif;
+                    ?>
                 </div>
                 <div class="header-middle"><span class="mobile-menu-button"><i></i><i></i></span>
                     <div class="header-logo"><a href="#">
@@ -87,8 +95,16 @@
                         <div class="close-mobile-navigation"></div>
                         <div class="header-navigation-container">
                             <div class="header-navigation-header">
-                                <div class="header-avatar"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/avatar.png" alt=""></div>
-                                <div class="header-button"><a class="button-header button-header--green" href="#">Registrati</a><a class="button-header button-header--default" href="#">Accedi</a></div>
+                                <?php
+                                if (is_user_logged_in()) : ?>
+                                <?php
+                                //LOGGED USER HTML
+                                else: ?>
+                                    <div class="header-avatar"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/avatar.png" alt=""></div>
+                                    <div class="header-button"><a class="button-header button-header--green" href="#">Registrati</a><a class="button-header button-header--default" href="#">Accedi</a></div>
+                                <?php
+                                endif;
+                                ?>
                             </div>
                             <div class="header-navigation-ovewflow">
                                 <ul id="navigation">
