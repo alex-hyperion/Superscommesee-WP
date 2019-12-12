@@ -20,32 +20,6 @@ $post_slug = $post->post_name;
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'superscommesse' ); ?></a>
-
-<!--		<header id="masthead" class="--><?php //echo is_singular() && superscommesse_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?><!--">-->
-<!---->
-<!--			<div class="site-branding-container">-->
-<!--				--><?php //get_template_part( 'template-parts/header/site', 'branding' ); ?>
-<!--			</div> .site-branding-container -->
-<!---->
-<!--			--><?php //if ( is_singular() && superscommesse_can_show_post_thumbnail() ) : ?>
-<!--				<div class="site-featured-image">-->
-<!--					--><?php
-//						superscommesse_post_thumbnail();
-//						the_post();
-//						$discussion = ! is_page() && superscommesse_can_show_post_thumbnail() ? superscommesse_get_discussion_data() : null;
-//
-//						$classes = 'entry-header';
-//					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
-//						$classes = 'entry-header has-discussion';
-//					}
-//					?>
-<!--					<div class="--><?php //echo $classes; ?><!--">-->
-<!--						--><?php //get_template_part( 'template-parts/header/entry', 'header' ); ?>
-<!--					</div> .entry-header -->
-<!--					--><?php //rewind_posts(); ?>
-<!--				</div>-->
-<!--			--><?php //endif; ?>
-<!--		</header> #masthead -->
             <header class="header">
                 <div class="header-top">
                     <div class="header-top__left"><a href="#">il gioco è vietato ai minori di anni 18 - <b>può causare dipendenza</b></a></div>
