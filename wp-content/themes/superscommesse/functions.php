@@ -26,7 +26,7 @@ function filter_menu_item_css_id( $menu_id, $item, $args, $depth ) {
 
 add_filter( 'nav_menu_css_class', 'filter_nav_menu_css_classes', 10, 4 );
 function filter_nav_menu_css_classes( $classes, $item, $args, $depth ) {
-	if ( $args->theme_location === 'header_menu' ) {
+	if ( $args->theme_location == 'header_menu' ) {
 		$classes = [
 			''
 		];
@@ -43,7 +43,7 @@ function filter_nav_menu_css_classes( $classes, $item, $args, $depth ) {
 
 add_filter( 'nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 4 );
 function filter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
-	if ( $args->theme_location === 'header_menu' ) {
+	if ( $args->theme_location == 'header_menu' ) {
 		$atts['data-name'] = sanitize_title( $item->title );
 	}
 
