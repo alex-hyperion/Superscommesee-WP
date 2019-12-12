@@ -48,16 +48,8 @@ $post_slug = $post->post_name;
 <!--		</header> #masthead -->
             <header class="header">
                 <div class="header-top">
-                    <?php
-                    if (is_user_logged_in()) : ?>
-                    <?php
-                    //LOGGED USER HTML
-                    else: ?>
-                        <div class="header-top__left"><a href="#">il gioco è vietato ai minori di anni 18 - <b>può causare dipendenza</b></a></div>
-                        <div class="header-top__right"><a class="button-header button-header--default" href="#">Accedi</a><a class="button-header button-header--green" href="#">Registrati</a></div>
-                    <?php
-                    endif;
-                    ?>
+                    <div class="header-top__left"><a href="#">il gioco è vietato ai minori di anni 18 - <b>può causare dipendenza</b></a></div>
+                    <div class="header-top__right"><a class="button-header button-header--default" href="https://www.superscommesse.it/login.html">Accedi</a><a class="button-header button-header--green" href="https://www.superscommesse.it/registrazione_fast.html">Registrati</a></div>
                 </div>
                 <div class="header-middle"><span class="mobile-menu-button"><i></i><i></i></span>
                     <div class="header-logo"><a href="#">
@@ -97,27 +89,21 @@ $post_slug = $post->post_name;
                         <div class="close-mobile-navigation"></div>
                         <div class="header-navigation-container">
                             <div class="header-navigation-header">
-                                <?php
-                                if (is_user_logged_in()) : ?>
-                                <?php
-                                //LOGGED USER HTML
-                                else: ?>
-                                    <div class="header-avatar"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/avatar.png" alt=""></div>
-                                    <div class="header-button"><a class="button-header button-header--green" href="#">Registrati</a><a class="button-header button-header--default" href="#">Accedi</a></div>
-                                <?php
-                                endif;
-                                ?>
+                                <div class="header-avatar"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/avatar.png" alt=""></div>
+                                <div class="header-button"><a class="button-header button-header--green" href="https://www.superscommesse.it/registrazione_fast.html">Registrati</a><a class="button-header button-header--default" href="https://www.superscommesse.it/login.html">Accedi</a></div>
                             </div>
                             <div class="header-navigation-ovewflow">
                                 <ul id="navigation">
-                                    <li><a data-name="scommesse" href="www.superscommesse.it/scommesse/schedine.html">Scommesse Sportive</a></li>
-                                    <li><a data-name="pronostici" href="<?php echo get_permalink( get_page_by_title( 'Pronostici' ) )?>">Pronostici</a></li>
-                                    <li><a data-name="notizie" href="www.superscommesse.it/notizie/">Notizie</a></li>
-                                    <li><span data-name="bookmaker">Bonus Bookmaker</span></li>
-                                    <li class="multireg-lnk"><a data-name="multiregistrazione" href="www.superscommesse.it/multiregistrazione.html?utm_source=superscommesse&amp;utm_medium=ham_menu&amp;utm_term=&amp;utm_content=multiregistrazione&amp;utm_campaign=sei_furbo">Multiregistrazione - Esclusiva<img src="images/multi.svg" alt=""></a></li>
-                                    <li><a data-name="tifosi" href="www.superscommesse.it/tifosi/">Community</a></li>
-                                    <li><a data-name="archivio" href="www.superscommesse.it/risultati/">Risultati</a></li>
-                                    <li><a data-name="casino" href="https://casino.superscommesse.it/">Giochi Casino</a></li>
+                                    <?php
+                                    wp_nav_menu([
+		                                    'theme_location'  => 'header_menu',
+		                                    'container'       => false,
+		                                    'menu_id'         => '',
+		                                    'items_wrap'      => '%3$s',
+	                                    ]
+                                    );
+                                    ?>
+<!--
                                 </ul>
                             </div>
                             <div class="header-navigation-footer"><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt=""></a></div>
