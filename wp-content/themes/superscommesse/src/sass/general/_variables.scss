@@ -1,0 +1,117 @@
+/*Variables*/
+
+/*COLORS*/
+$black: #000000;
+$black2: #7E7E80;
+
+$gray: #f7f7f7;
+$red: #D13830;
+$light-blue: darken(#27AE60, 10%);
+$green: #81B11A;
+
+/* base variables */
+$default-color: $black;
+$link-color: $light-blue;
+$hover-color: $black;
+$mark-color: $light-blue;
+$btn-color:  #81B11A;
+$btn-hover: darken(#81B11A, 10%);
+$error: $red;
+
+/* body */
+
+$base-font-size: 16px;
+$base-line-height:normal;
+$body-bg: #fff;
+
+/* base fonts */
+$base-font-family: "OpenSans-Regular","Arial","Helvetica Neue","Helvetica",sans-serif;
+@mixin fl {font-family: 'OpenSans-Light','Arial','Helvetica Neue','Helvetica',sans-serif;}
+@mixin fb {font-family: 'OpenSans-Bold','Arial','Helvetica Neue','Helvetica',sans-serif;}
+@mixin fr {font-family: 'OpenSans-Regular','Arial','Helvetica Neue','Helvetica',sans-serif;}
+@mixin fg {font-family: 'gagarinregular','Arial','Helvetica Neue','Helvetica',sans-serif;}
+
+
+/*ANIMATIONS*/
+@mixin anim{
+  transition: all .4s ease;
+}
+@mixin anim-linear{
+  transition: all .4s linear;
+}
+@mixin width($width){
+    -ms-flex-preferred-size: $width;
+    flex-basis: $width;
+    max-width: $width;
+    width: $width;
+}
+
+/*MEDIA QUERY*/
+@mixin reset($type){
+  $resets: (
+    ul: (
+      list-style: none,
+      margin: 0,
+      padding: 0,
+      li: (
+        margin: 0,
+        padding: 0,
+        )
+      )
+    );
+  @each $prop, $value in map-get($resets, $type) {
+    @if type-of($value) == 'map' {
+      & > #{$prop} {
+        @each $sub-prop, $sub-value in $value {
+          #{$sub-prop}: $sub-value;
+        }
+      }      
+    } @else {
+      #{$prop}: $value;
+    }
+  }
+}
+
+// @include reset(ul);
+@mixin respond-to($media) {
+  @if $media == phones {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $media == handhelds {
+    @media only screen and (max-width: 599px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (max-width: 1023px) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (max-width: 1279px) { @content; }
+  }
+  @else if $media == desktop-lg {
+    @media only screen and (max-width: 1529px) { @content; }
+  }
+}
+
+//placeholder
+@mixin optional-at-root($sel){
+  @at-root #{if(not &, $sel, selector-append(&, $sel))}{
+    @content
+  }
+}
+
+@mixin placeholder{
+  @include optional-at-root('::-webkit-input-placeholder'){
+    @content
+  }
+  @include optional-at-root(':-moz-placeholder'){
+    @content
+  }
+  @include optional-at-root('::-moz-placeholder'){
+    @content
+  }
+  @include optional-at-root(':-ms-input-placeholder'){
+    @content
+  }
+}
