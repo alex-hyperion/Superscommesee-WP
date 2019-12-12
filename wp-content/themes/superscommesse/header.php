@@ -103,7 +103,6 @@ $post_slug = $post->post_name;
 	                                    ]
                                     );
                                     ?>
-<!--
                                 </ul>
                             </div>
                             <div class="header-navigation-footer"><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt=""></a></div>
