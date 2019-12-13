@@ -10,16 +10,14 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 }
 
 // Check function exists.
-if( function_exists('acf_add_options_page') ) {
+if ( function_exists( 'acf_add_options_page' ) ) {
 
-	// Register options page.
-	$option_page = acf_add_options_page(array(
-		'page_title'    => __('Header&Footer Settings'),
-		'menu_title'    => __('Header&Footer Settings'),
-		'menu_slug'     => 'header-footer-settings',
-		'capability'    => 'edit_posts',
-		'redirect'      => false
-	));
+	acf_add_options_page();
+
+	acf_add_options_sub_page('General');
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Footer');
+	acf_add_options_sub_page('Home Footer');
 }
 
 add_theme_support( 'menus' );
